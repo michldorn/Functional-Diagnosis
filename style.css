@@ -1,0 +1,131 @@
+/* === Allgemeine Stile für den gesamten Inhalt === */
+* {
+  font-family: "Lora", serif;  /* Schriftart für alle Elemente */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px 0;
+  background-color: #bfbfbf;  /* Hellgrauer Hintergrund */
+  color: #000000;  /* Schwarze Schrift */
+  display: flex;
+  justify-content: center;  /* Zentrierung horizontal */
+  align-items: center;  /* Vertikale Zentrierung */
+  min-height: 100vh;  /* Höhe mindestens so groß wie der Viewport */
+}
+
+/* === Container für alle Module === */
+.container {
+  display: flex;
+  flex-direction: column;  /* Inhalte vertikal anordnen */
+  align-items: center;  /* Zentrierung horizontal */
+  justify-content: flex-start;  /* Nach oben ausgerichtet */
+  width: 80%;  /* Breite des Containers */
+  max-width: 600px;  /* Maximalbreite */
+  text-align: center;  /* Zentrierter Text */
+  padding: 20px;  /* Abstand innen */
+  gap: 20px;  /* Abstand zwischen den Elementen */
+}
+
+/* === Modulfelder für Dropdowns (z. B. "Ort", "Art") === */
+.field {
+  background-color: #ffffff;  /* Weißer Hintergrund */
+  border-radius: 10px;  /* Abgerundete Ecken */
+  padding: 10px;  /* Innenabstand */
+  border: 2px solid #000000;  /* Schwarzer Rand */
+  width: 70%;  /* Breite 70% des Containers */
+  position: relative;  /* Für flexible Positionierung */
+}
+
+/* === Überschriften in den Modulen === */
+h2 {
+  font-size: 1.2em;  /* Schriftgröße */
+  margin-bottom: 10px;  /* Abstand unterhalb der Überschrift */
+  color: #000000;  /* Schwarze Schrift */
+}
+
+/* === Lage-Dropdown (neues erstes Dropdown) === */
+.lage-dropdown {
+  margin-bottom: 10px;  /* Erhöhter Abstand unterhalb des Lage-Dropdowns */
+}
+
+/* === Dropdown-Menüs (Select-Felder) === */
+select {
+  padding: 10px;  /* Innenabstand */
+  font-size: 0.9em;  /* Schriftgröße */
+  width: 100%;  /* Volle Breite */
+  border: 2px solid #000000;  /* Schwarzer Rahmen */
+  border-radius: 10px;  /* Abgerundete Ecken */
+  background-color: #000000;  /* Schwarzer Hintergrund */
+  color: #ffffff;  /* Weiße Schrift */
+  appearance: none;  /* Pfeil des Standard-Select-Menüs entfernen */
+}
+
+#ortEbene2-container,
+#ortEbene3-container,
+#ortEbene4-container {
+  margin-top: 10px;  /* Abstand der sich öffnenden Dropdowns */
+}
+
+/* === Ergebnis-Container für Diagnose-Button (Startzustand) === */
+.result-container {
+  background-color: #ff0000;  /* Roter Hintergrund */
+  padding: 20px;  /* Abstand innen */
+  border-radius: 10px;  /* Abgerundete Ecken */
+  border: 2px solid #000000;  /* Schwarzer Rand */
+  width: 70%;  /* Breite 70% */
+  margin-top: 20px;  /* Abstand nach oben */
+  min-height: 150px;  /* Mindesthöhe */
+  display: flex;  /* Flexbox zur Zentrierung */
+  justify-content: center;  /* Zentrierung horizontal */
+  align-items: center;  /* Zentrierung vertikal */
+  cursor: pointer;  /* Hand-Cursor für Klick */
+  transition: background-color 0.3s ease;  /* Sanfter Übergang bei Hover */
+}
+
+/* === Hover-Zustand des Ergebnis-Containers === */
+.result-container:hover {
+  background-color: #e60000;  /* Dunklerer Rotton bei Hover */
+}
+
+/* === Diagnose-Text im Ergebnis-Container === */
+.diagnose-button-text {
+  color: white;  /* Weiße Schriftfarbe */
+  font-size: 1.5em;  /* Große Schriftgröße */
+  font-weight: bold;  /* Fettgedruckt */
+  text-align: center;  /* Zentrierter Text */
+  margin: 0;  /* Kein Außenabstand */
+}
+
+/* === Diagnoseanzeige mit grünem Hintergrund === */
+.result-container.diagnosis-mode {
+  background-color: #00ff00;  /* Grüner Hintergrund bei Anzeige der Diagnose */
+  cursor: default;  /* Kein Zeigefinger-Cursor */
+}
+
+/* === Diagnose-Text (schwarzer Text bei der Diagnoseanzeige) === */
+.diagnosis-text {
+  color: black;  /* Schwarze Schriftfarbe */
+  font-size: 1.2em;  /* Schriftgröße */
+  font-weight: bold;  /* Fettgedruckt */
+  text-align: center;  /* Zentrierter Text */
+}
+
+/* === Standard-Button-Stil (falls weitere Buttons vorhanden sind) === */
+.button {
+  padding: 10px 30px;  /* Abstand innen des Buttons */
+  background-color: #ffffff;  /* Weißer Hintergrund */
+  color: #000000;  /* Schwarze Schriftfarbe */
+  font-size: 1.2em;  /* Schriftgröße */
+  border: 2px solid #000000;  /* Schwarzer Rahmen */
+  border-radius: 10px;  /* Abgerundete Ecken */
+  cursor: pointer;  /* Zeiger-Cursor */
+  margin-top: 10px;  /* Abstand nach oben */
+}
+
+.button:hover {
+  background-color: #cccccc;  /* Hellgrauer Hintergrund bei Hover */
+}
