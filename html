@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Physiotherapeutische Diagnose</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Modul 1: Ort -->
+      <div class="field">
+        <h2>Ort</h2>
+
+        <!-- Container für das Lage-Dropdown -->
+        <div class="lage-dropdown-container">
+          <select id="lage" class="lage-dropdown">
+            <option value="">Bitte auswählen</option>
+            <option value="Links">Links</option>
+            <option value="Rechts">Rechts</option>
+            <option value="Beidseits">Beidseits</option>
+            <option value="Global">Global</option>
+            <option value="Proximal">Proximal</option>
+            <option value="Distal">Distal</option>
+            <option value="Medial">Medial</option>
+            <option value="Lateral">Lateral</option>
+            <option value="Ventral">Ventral</option>
+            <option value="Dorsal">Dorsal</option>
+            <option value="Superior">Superior</option>
+            <option value="Inferior">Inferior</option>
+            <option value="Rostral">Rostral</option>
+            <option value="Caudal">Caudal</option>
+            <option value="Anterior">Anterior</option>
+            <option value="Posterior">Posterior</option>
+            <option value="Palmar">Palmar</option>
+            <option value="Plantar">Plantar</option>
+            <option value="Radial">Radial</option>
+            <option value="Ulnar">Ulnar</option>
+          </select>
+        </div>
+
+        <!-- Bestehende Dropdowns -->
+        <select id="ortEbene1" onchange="showOrtEbene2()">
+          <option value="">Bitte auswählen</option>
+          <option value="Bewegungsapparat">Bewegungsapparat</option>
+          <option value="Kardio-respiratorisches System">
+            Kardio-respiratorisches System
+          </option>
+          <option value="Nervensystem">Nervensystem</option>
+          <option value="Haut und Weichteile">Haut und Weichteile</option>
+          <option value="Blut- und Lymphsystem">Blut- und Lymphsystem</option>
+          <option value="Endokrines System">Endokrines System</option>
+        </select>
+
+        <div id="ortEbene2-container" style="display: none; margin-top: 10px">
+          <select id="ortEbene2" onchange="showOrtEbene3()">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+
+        <div id="ortEbene3-container" style="display: none; margin-top: 10px">
+          <select id="ortEbene3" onchange="showOrtEbene4()">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+
+        <div id="ortEbene4-container" style="display: none; margin-top: 10px">
+          <select id="ortEbene4">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Modul 2: Art -->
+      <div class="field">
+        <h2>Art</h2>
+        <select id="artEbene1" onchange="showArtEbene2()">
+          <option value="">Bitte auswählen</option>
+          <option value="Physiologische Funktionen des Körpers">
+            Physiologische Funktionen des Körpers
+          </option>
+          <option value="Funktionen des Nervensystems">
+            Funktionen des Nervensystems
+          </option>
+          <option value="Sinnesfunktionen und Schmerz">
+            Sinnesfunktionen und Schmerz
+          </option>
+          <option value="Bewegungsfunktionen">Bewegungsfunktionen</option>
+          <option value="Verdauungs- und Ausscheidungsfunktionen">
+            Verdauungs- und Ausscheidungsfunktionen
+          </option>
+          <option value="Endokrine und metabolische Funktionen">
+            Endokrine und metabolische Funktionen
+          </option>
+          <option value="Haut- und Weichteilfunktionen">
+            Haut- und Weichteilfunktionen
+          </option>
+          <option value="Psychische Funktionen">Psychische Funktionen</option>
+          <option value="Funktionen im Bereich der Kommunikation">
+            Funktionen im Bereich der Kommunikation
+          </option>
+        </select>
+
+        <div id="artEbene2-container" style="display: none; margin-top: 10px">
+          <select id="artEbene2" onchange="showArtEbene3()">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+
+        <div id="artEbene3-container" style="display: none; margin-top: 10px">
+          <select id="artEbene3">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Modul 3: Richtung -->
+      <div class="field">
+        <h2>Richtung</h2>
+        <select id="richtung">
+          <option value="">Bitte auswählen</option>
+          <option value="Abduktion">Abduktion</option>
+          <option value="Adduktion">Adduktion</option>
+          <option value="Außenrotation">Außenrotation</option>
+          <option value="Beugung">Beugung</option>
+          <option value="Dorsalflexion">Dorsalflexion</option>
+          <option value="Eversion">Eversion</option>
+          <option value="Exspiration">Exspiration</option>
+          <option value="Extension">Extension</option>
+          <option value="Flexion">Flexion</option>
+          <option value="Inspiration">Inspiration</option>
+          <option value="Innenrotation">Innenrotation</option>
+          <option value="Kippbewegung">Kippbewegung</option>
+          <option value="Lateralflexion">Lateralflexion</option>
+          <option value="Plantarflexion">Plantarflexion</option>
+          <option value="Pronation">Pronation</option>
+          <option value="Protraktion">Protraktion</option>
+          <option value="Reklination">Reklination</option>
+          <option value="Retroflexion">Retroflexion</option>
+          <option value="Rotation">Rotation</option>
+          <option value="Senkung">Senkung</option>
+          <option value="Streckung">Streckung</option>
+          <option value="Supination">Supination</option>
+          <option value="Traktion">Traktion</option>
+          <option value="Ventralflexion">Ventralflexion</option>
+          <option value="Anteversion">Anteversion</option>
+          <option value="Retroversion">Retroversion</option>
+          <option value="Zirkumduktion">Zirkumduktion</option>
+          <option value="Gegendrehung">Gegendrehung</option>
+          <option value="Ausscheren">Ausscheren</option>
+          <option value="Gelenkbewegung">Gelenkbewegung</option>
+          <option value="Spannung">Spannung</option>
+          <option value="Ausdehnung">Ausdehnung</option>
+          <option value="Dehnung">Dehnung</option>
+          <option value="Kontraktion">Kontraktion</option>
+          <option value="Erweiterung">Erweiterung</option>
+          <option value="Entspannung">Entspannung</option>
+        </select>
+      </div>
+
+      <!-- Modul 4: Qualität -->
+      <div class="field">
+        <h2>Qualität</h2>
+        <select id="qualität">
+          <option value="">Bitte auswählen</option>
+          <option value="abgehackt">abgehackt</option>
+          <option value="abnorm">abnorm</option>
+          <option value="anstrengend">anstrengend</option>
+          <option value="ausgeprägt">ausgeprägt</option>
+          <option value="ausstrahlend">ausstrahlend</option>
+          <option value="begrenzt">begrenzt</option>
+          <option value="behindernd">behindernd</option>
+          <option value="brennend">brennend</option>
+          <option value="dumpf">dumpf</option>
+          <option value="drückend">drückend</option>
+          <option value="eingeschränkt">eingeschränkt</option>
+          <option value="erschöpft">erschöpft</option>
+          <option value="fest">fest</option>
+          <option value="flexibel">flexibel</option>
+          <option value="fragil">fragil</option>
+          <option value="gering">gering</option>
+          <option value="harte">harte</option>
+          <option value="klopfend">klopfend</option>
+          <option value="krampfartig">krampfartig</option>
+          <option value="krämpfend">krämpfend</option>
+          <option value="lähmend">lähmend</option>
+          <option value="langsam">langsam</option>
+          <option value="langsamer">langsamer</option>
+          <option value="mangelhaft">mangelhaft</option>
+          <option value="mäßig">mäßig</option>
+          <option value="mühsam">mühsam</option>
+          <option value="nagend">nagend</option>
+          <option value="pulsierend">pulsierend</option>
+          <option value="reduziert">reduziert</option>
+          <option value="ruckartig">ruckartig</option>
+          <option value="schlaff">schlaff</option>
+          <option value="schmerzend">schmerzend</option>
+          <option value="schwach">schwach</option>
+          <option value="schwankend">schwankend</option>
+          <option value="schwierig">schwierig</option>
+          <option value="sehr schwach">sehr schwach</option>
+          <option value="spastisch">spastisch</option>
+          <option value="spärlich">spärlich</option>
+          <option value="spannend">spannend</option>
+          <option value="spritzend">spritzend</option>
+          <option value="starr">starr</option>
+          <option value="stark">stark</option>
+          <option value="stechend">stechend</option>
+          <option value="taub">taub</option>
+          <option value="verkrampft">verkrampft</option>
+          <option value="verlangsamt">verlangsamt</option>
+          <option value="vermindert">vermindert</option>
+          <option value="verschoben">verschoben</option>
+          <option value="wackelig">wackelig</option>
+          <option value="widerstandsfähig">widerstandsfähig</option>
+          <option value="zuckend">zuckend</option>
+        </select>
+      </div>
+
+      <!-- Modul 5: Grad -->
+      <div class="field">
+        <h2>Grad</h2>
+        <select id="gradEbene1" onchange="showGradEbene2()">
+          <option value="">Bitte auswählen</option>
+          <option value="NAS (Numerische Analog Skala - Schmerz)">
+            NAS (Numerische Analog Skala - Schmerz)
+          </option>
+          <option value="Borg (Dyspnoe - Atemnot)">
+            Borg (Dyspnoe - Atemnot)
+          </option>
+          <option value="6-Minuten-Gehtest (Kardiopulmonale Ausdauer)">
+            6-Minuten-Gehtest (Kardiopulmonale Ausdauer)
+          </option>
+          <option value="ROM (Range of Motion - Bewegungsumfang)">
+            ROM (Range of Motion - Bewegungsumfang)
+          </option>
+          <option value="MRC (Muskelkrafttest - Manual Muscle Testing)">
+            MRC (Muskelkrafttest - Manual Muscle Testing)
+          </option>
+          <option value="BBS (Berg Balance Scale - Dynamisches Gleichgewicht)">
+            BBS (Berg Balance Scale - Dynamisches Gleichgewicht)
+          </option>
+          <option
+            value="FMS (Functional Movement Screen - Funktionelle Beweglichkeit und Sicherheit)"
+          >
+            FMS (Functional Movement Screen - Funktionelle Beweglichkeit und
+            Sicherheit)
+          </option>
+          <option
+            value="FMA (Fugl-Meyer Assessment - Neurologische Beurteilung)"
+          >
+            FMA (Fugl-Meyer Assessment - Neurologische Beurteilung)
+          </option>
+          <option
+            value="ODI (Oswestry Disability Index - Funktionelle Beeinträchtigung bei Rückenschmerzen)"
+          >
+            ODI (Oswestry Disability Index - Funktionelle Beeinträchtigung bei
+            Rückenschmerzen)
+          </option>
+          <option
+            value="MMSE (Mini Mental State Examination - Kognitive Beurteilung)"
+          >
+            MMSE (Mini Mental State Examination - Kognitive Beurteilung)
+          </option>
+          <option
+            value="WOMAC (Western Ontario and McMaster Universities Osteoarthritis Index - Arthrose)"
+          >
+            WOMAC (Western Ontario and McMaster Universities Osteoarthritis
+            Index - Arthrose)
+          </option>
+          <option
+            value="TUG (Timed Up and Go Test - Beweglichkeit und Sturzrisiko)"
+          >
+            TUG (Timed Up and Go Test - Beweglichkeit und Sturzrisiko)
+          </option>
+          <option
+            value="SCT (Static Contact Test - Neurodynamische Beurteilung)"
+          >
+            SCT (Static Contact Test - Neurodynamische Beurteilung)
+          </option>
+          <option value="STarT Back Screening Tool (Rückenschmerzen)">
+            STarT Back Screening Tool (Rückenschmerzen)
+          </option>
+          <option
+            value="DASH (Disabilities of the Arm, Shoulder, and Hand - Funktion der oberen Extremität)"
+          >
+            DASH (Disabilities of the Arm, Shoulder, and Hand - Funktion der
+            oberen Extremität)
+          </option>
+          <option value="Lequesne Index (Hüft- und Kniearthrose)">
+            Lequesne Index (Hüft- und Kniearthrose)
+          </option>
+          <option value="Friedreich Ataxia Rating Scale (Friedreich Ataxie)">
+            Friedreich Ataxia Rating Scale (Friedreich Ataxie)
+          </option>
+          <option
+            value="Elderly Mobility Scale (EMIS - Mobilität älterer Menschen)"
+          >
+            Elderly Mobility Scale (EMIS - Mobilität älterer Menschen)
+          </option>
+          <option value="Gait and Balance Assessment (Ganganalyse und Balance)">
+            Gait and Balance Assessment (Ganganalyse und Balance)
+          </option>
+          <option
+            value="Ankle-Hindfoot Scale (Knöchel-Hinterfuß Skala - Fußgelenk und Fuß)"
+          >
+            Ankle-Hindfoot Scale (Knöchel-Hinterfuß Skala - Fußgelenk und Fuß)
+          </option>
+          <option value="Tampa Scale of Kinesiophobia (Kinesiophobie)">
+            Tampa Scale of Kinesiophobia (Kinesiophobie)
+          </option>
+          <option value="Cognitive Function Test (Kognitive Beurteilung)">
+            Cognitive Function Test (Kognitive Beurteilung)
+          </option>
+          <option
+            value="FNS (Funktionelle Nervenstimulation - Sensomotorische Funktionen)"
+          >
+            FNS (Funktionelle Nervenstimulation - Sensomotorische Funktionen)
+          </option>
+          <option value="Purdue Pegboard Test (Fingerfertigkeit)">
+            Purdue Pegboard Test (Fingerfertigkeit)
+          </option>
+          <option value="Modified Ashworth Scale (MAS) - Muskeltonus">
+            Modified Ashworth Scale (MAS) - Muskeltonus
+          </option>
+          <option value="Shuttle Walk Test (Ausdauer)">
+            Shuttle Walk Test (Ausdauer)
+          </option>
+          <option value="Barthel Index (Aktivitäten des täglichen Lebens)">
+            Barthel Index (Aktivitäten des täglichen Lebens)
+          </option>
+          <option
+            value="Ranchos Los Amigos Scale (Neurorehabilitation - Stadien der Erholung)"
+          >
+            Ranchos Los Amigos Scale (Neurorehabilitation - Stadien der
+            Erholung)
+          </option>
+          <option value="Handicap Assessment (Beurteilung von Einschränkungen)">
+            Handicap Assessment (Beurteilung von Einschränkungen)
+          </option>
+          <option value="Neurotrophic Index (Nervenwachstum und -funktion)">
+            Neurotrophic Index (Nervenwachstum und -funktion)
+          </option>
+        </select>
+
+        <div id="gradEbene2-container" style="display: none; margin-top: 10px">
+          <select id="gradEbene2">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Modul 6: Aktivität -->
+      <div class="field">
+        <h2>Aktivität</h2>
+        <!-- Ebene 1: Hauptkategorie -->
+        <select id="aktivitätEbene1" onchange="showAktivitätEbene2()">
+          <option value="">Bitte auswählen</option>
+          <option value="ADL (Aktivitäten des täglichen Lebens)">
+            ADL (Aktivitäten des täglichen Lebens)
+          </option>
+          <option value="Mobilität und Bewegung">Mobilität und Bewegung</option>
+          <option value="Transfers">Transfers</option>
+          <option value="Sportliche Aktivitäten">Sportliche Aktivitäten</option>
+        </select>
+
+        <!-- Ebene 2: Unterkategorie -->
+        <div
+          id="aktivitätEbene2-container"
+          style="display: none; margin-top: 10px"
+        >
+          <select id="aktivitätEbene2" onchange="showAktivitätEbene3()">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+
+        <!-- Ebene 3: Detaillierte Aktivitäten -->
+        <div
+          id="aktivitätEbene3-container"
+          style="display: none; margin-top: 10px"
+        >
+          <select id="aktivitätEbene3">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Modul 7: Partizipation -->
+      <div class="field">
+        <h2>Partizipation</h2>
+
+        <!-- Ebene 1 -->
+        <div id="partizipationEbene1-container" style="margin-top: 10px">
+          <select id="partizipationEbene1" onchange="showPartizipationEbene2()">
+            <option value="">Bitte auswählen</option>
+            <option value="Gesellschaftliche Teilhabe">
+              Gesellschaftliche Teilhabe
+            </option>
+            <option value="Kommunikation und Informationsaustausch">
+              Kommunikation und Informationsaustausch
+            </option>
+            <option
+              value="Klinikspezifische Aktivitäten (Rehabilitation und Therapie)"
+            >
+              Klinikspezifische Aktivitäten (Rehabilitation und Therapie)
+            </option>
+          </select>
+        </div>
+
+        <!-- Ebene 2 -->
+        <div
+          id="partizipationEbene2-container"
+          style="display: none; margin-top: 10px"
+        >
+          <select id="partizipationEbene2" onchange="showPartizipationEbene3()">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+
+        <!-- Ebene 3 -->
+        <div
+          id="partizipationEbene3-container"
+          style="display: none; margin-top: 10px"
+        >
+          <select id="partizipationEbene3">
+            <option value="">Bitte auswählen</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Diagnose-Modul als Button -->
+      <div
+        class="result-container"
+        id="fd-button"
+        onclick="generateDiagnosis()"
+      >
+        <p class="diagnose-button-text">Funktionelle Diagnose generieren</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
