@@ -1,0 +1,11 @@
+name	ttl	IN	type	prio	content
+functionaldiagnosis.org.	600	IN	A		89.31.143.90
+*.functionaldiagnosis.org.	600	IN	A		89.31.143.90
+de.functionaldiagnosis.org.	600	IN	A		89.31.143.90
+functionaldiagnosis.org.	3600	IN	MX	10	mx00.udag.de.
+functionaldiagnosis.org.	3600	IN	MX	20	mx01.udag.de.
+functionaldiagnosis.org.	86400	IN	NS		ns.udag.de.
+functionaldiagnosis.org.	86400	IN	NS		ns.udag.net.
+functionaldiagnosis.org.	86400	IN	NS		ns.udag.org.
+functionaldiagnosis.org.	600	IN	TXT		v=spf1 include:_smtp.udag.de ~all
+functionaldiagnosis.org.	86400	IN	SOA		ns.udag.de. hostmaster.united-domains.de. 2025011351 10800 3600 604800 3600
